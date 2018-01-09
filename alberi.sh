@@ -1,5 +1,11 @@
 #!/bin/bash
 
+### requirements ###
+# curl
+# jq
+# csvkit
+### requirements ###
+
 set -x
 
 cartella=$(pwd)
@@ -68,7 +74,7 @@ for i in "$cartella"/csv/*.csv;
   filename=$(basename "$i")
   extension="${filename##*.}"
   filename="${filename%.*}"
-  # estraggo soltanto le colonne con latitude e longitude, sostituisco il decimale da "," a ".", 
+  # estraggo soltanto le colonne con latitude e longitude e poi sostituisco il decimale da "," a ".", 
   # converto il carattere "°" in "d", e estraggo via regex i dati geografici in una modalità leggibile
   csvsql -I --query 'select "LONGITUDINE su GIS" as longitude, "LATITUDINE su GIS" as latitude from '"$filename"'' "$i" | sed 's/,/./g;s/°/d/g' | tee "$cartella"/csv/"$filename"_tmp_raw.txt | sed -r 's|^[^0-9]{1,5}([0-9]{1,3})(d ?)([0-9]{1,2})([^0-9]{1,5})([0-9]{1,2}\.?[0-9]{0,2})([^0-9]+)([0-9]{1,3})(d ?)([0-9]{1,2})([^0-9]{1,5})([0-9]{1,2}\.?[0-9]{0,2})(.*)$|\1d\3k\5" \7d\9k\11"|g' | sed "s/k/'/g" | sed '1d' > "$cartella"/csv/"$filename"_tmp.txt
   # converto le coordinate in gradi decimali
@@ -86,3 +92,9 @@ done
 
 # unisco tutti i vari file in un unico file
 csvstack "$cartella"/csv/*.csv > "$cartella"/csv/alberiMonumentali.csv
+
+# alcuni record producono output errati per le coordinate (perché ci sono problemi nei dati originale) e li escludo
+<"$cartella"/csv/alberiMonumentali.csv grep -v "000000" > "$cartella"/alberiMonumentali.csv
+
+# creo il geojson
+csvjson --lat "latitude" --lon "longitude" "$cartella"/alberiMonumentali.csv > "$cartella"/alberiMonumentali.geojson

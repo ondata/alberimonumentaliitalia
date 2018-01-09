@@ -25,3 +25,14 @@ for filename in os.listdir('./'):
 - importare in pandas
 - rimuovere inutili righe di intestazione
 - inserire come nome colonna il nome del file source nell'attributo "territorio"
+
+# note
+
+- 01/I216/CT/19 ha lat e lon invertite
+- colonne nascoste
+- inutili righe di intestazione
+
+# Da fare
+
+- estrarre dati con wikidata
+- associare codice ISTAT comunale via select touch
