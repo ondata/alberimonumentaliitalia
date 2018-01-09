@@ -14,9 +14,6 @@ cartella=$(pwd)
 mkdir -p "$cartella"/ods
 mkdir -p "$cartella"/csv
 
-
-<<comment1
-comment1
 # svuoto la cartella dove inserirò i file di download
 rm "$cartella"/ods/*.ods
 
@@ -52,7 +49,6 @@ for i in "$cartella"/ods/*.ods;
   filename="${filename%.*}"
   pyexcel transcode --sheet-index 0 "$i" "$cartella"/csv/"$filename".csv
 done
-
 
 for i in "$cartella"/csv/*.csv; 
  do 
@@ -100,9 +96,6 @@ csvstack "$cartella"/csv/*.csv > "$cartella"/csv/alberiMonumentali.csv
 
 # alcuni record producono output errati per le coordinate (perché ci sono problemi nei dati originali) e li escludo
 <"$cartella"/csv/alberiMonumentali.csv grep -v "000000" > "$cartella"/alberiMonumentali.csv
-
-<<comment2
-comment2
 
 # creo il geojson a partire dai record che hanno valorizzate le coordinate
 csvsql --query "select * from alberiMonumentali where longitude is not null" "$cartella"/alberiMonumentali.csv | csvjson --lat "latitude" --lon "longitude" > "$cartella"/alberiMonumentali.geojson
