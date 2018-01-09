@@ -4,6 +4,7 @@
 # curl
 # jq
 # csvkit
+# perl (di solito preinstallato)
 ### requirements ###
 
 set -x
