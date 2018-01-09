@@ -37,6 +37,7 @@ do
 done < $INPUT
 IFS=$OLDIFS
 
+rm "$cartella"/file.csv
 
 # rimuovo vecchi file CSV
 rm "$cartella"/csv/*.csv; 
