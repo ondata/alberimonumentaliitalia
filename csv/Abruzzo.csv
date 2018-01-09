@@ -1,0 +1,74 @@
+ID,N. SCHEDA,PROVINCIA,COMUNE,LOCALITÀ,LATITUDINE su GIS,LONGITUDINE su GIS,ALTITUDINE (m s.l.m.),CONTESTO URBANO sì/no,NOME SCIENTIFICO,NOME VOLGARE,CIRCONFERENZA FUSTO (cm),ALTEZZA (m),CRITERI DI MONUMENTALITÀ,PROPOSTA DICHIARAZIONE NOTEVOLE INTERESSE PUBBLICO,longitude,latitude
+1,01/A235/CH/13,Chieti,Altino,Le Macchie – Articciaro," 42°05'14,00'' ","14°20'35,00'' ",215,no,Juniperus oxycedrus L.,Ginepro coccolone,125,7,b) forma e portamento c) valore ecologico,no,14.343056,42.122500
+2,01/A485/CH/13,Chieti,Atessa,Piana Sant'Antonio,"42°06'41,82'' ","14°25'55,52''",125,si,Quercus pubescens Willd.,Roverella ,355,17,a) età e/o dimensioni,no,14.432089,42.139167
+3,01/A956/CH/13,Chieti,Bomba,Cementificio,"42°03'07,95'' ","14°21'48,11''",400,no,Quercus pubescens Willd.,Roverella ,530,16,a) età e/o dimensioni,no,14.363364,42.089167
+4,02/A956/CH/13,Chieti,Bomba,Cementificio,"42°03'07,00'' ","14°21'49,00''",400,no,Quercus pubescens Willd.,Roverella ,475,16,a) età e/o dimensioni,no,14.363611,42.089167
+5,03/A956/CH/13,Chieti,Bomba,Ponte Ballevino,"42°01'34,91'' ","14°22'09,74""",475,no,Quercus pubescens Willd.,Roverella ,439,20,a) età e/o dimensioni,no,14.369372,42.055833
+6,02/B057/CH/13,Chieti,Borrello,Ruvatella,"41°54'57,00''","14°19'28,00''",810,no,Populus tremula L.,Pioppo tremolo,240 - 184,20,a) età e/o dimensioni f) pregio paesaggistico,no,14.324444,41.939167
+7,05/B057/CH/13,Chieti,Borrello,Pareti,"41°55'33,00'' ","14°18'42,00''",641,no,Quercus pubescens Willd.,Roverella ,376,16,a) età e/o dimensioni f) pregio paesaggistico,no,14.311667,41.955833
+8,07/B057/CH/13,Chieti,Borrello,Pareti,"41°55'32,00'' ","14°18'42,00''",641,no,Quercus pubescens Willd.,Roverella ,250 - 230,12,a) età e/o dimensioni f) pregio paesaggistico,no,14.311667,41.955833
+9,08/B057/CH/13,Chieti,Borrello,Fonte del Sorbo,"41°54'33,24'' ","14°18'24,22''",793,no,Salix alba L.,Salice bianco,397,18,a) età e/o dimensioni c) valore ecologico,no,14.306728,41.939167
+10,09/B057/CH/13,Chieti,Borrello,Torrente Verde,"41°54'52,20'' ","14°19'24,31''",772,no,Salix eleagnos Scop.,Salice ripaiolo,300 - 150,8,a) età e/o dimensioni c) valore ecologico,no,14.323419,41.939167
+11,10/B057/CH/13,Chieti,Borrello,Quattro ricotte,"41°54'44,85'' ","14°18'11,98''",732,no,Quercus cerris L.,Cerro,273 - 200 - 155 ,20,a) età e/o dimensioni f) pregio paesaggistico,no,14.303328,41.939167
+12,12/B057/CH/13,Chieti,Borrello,Strada Provinciale n. 155,"41°54'57,34''","14°19'02,43''",809,no,Ulmus minor Mill.,Olmo campestre,100,15,d) rarità botanica ,no,14.317342,41.939167
+13,14/B057/CH/13,Chieti,Borrello,Torrente verde,"41°54'53,00'' ","14°19'23,00''",772,no,Salix alba L.,Salice bianco,338,18,a) età e/o dimensioni f) pregio paesaggistico,no,14.323056,41.939167
+14,16/B057/CH/13,Chieti,Borrello,Piana del Verde,"41°54'39,27'' ","14°20'03,40''",804,no,Salix alba L.,Salice bianco,432,14,a) età e/o dimensioni c) valore ecologico f) pregio paesaggistico,no,14.334278,41.939167
+15,17/B057/CH/13,Chieti,Borrello,Via 7 Settembre,"41°55'08,90'' ","14°18'18,08''",798,si,Crataegus monogyna Jacq.,Biancospino,110,9,a) età e/o dimensioni f) pregio paesaggistico,no,14.305022,41.955833
+16,01/B238/CH/13,Chieti,Bucchianico,Annunziata,"42°18'00,99'' ","14°09'39,79''",110,no,Morus alba L.,Gelso bianco,431,6.60,a) età e/o dimensioni,no,14.161053,42.339167
+17,02/B238/CH/13,Chieti,Bucchianico,Piane,"42°18'20,11'' ","14°11'18,54''",282,si,Platanus orientalis L.,Platano orientale,421,30,a) età e/o dimensioni b) forma e portamento ,no,14.188483,42.339167
+18,01/C428/CH/13,Chieti,Celenza Sul Trigno,Vallone vecchio,"41°53'29,00'' ","14°35'45,00''",215,no,Quercus pubescens Willd.,Roverella ,585,15,a) età e/o dimensioni,no,14.595833,41.922500
+19,02/C428/CH/13,Chieti,Celenza Sul Trigno,Colle dei Santi – Fonte delle Vigne,"41°51'18,00'' ","14°35'24,00''",270,no,Juniperus oxycedrus L.,Ginepro coccolone,105,13,a) età e/o dimensioni,no,14.590000,41.889167
+20,01/D996/CH/13,Chieti,Gessopalena,Santa Croce Coccioli,"42°02'52,34''","14°15'49,83''",510,no,Quercus pubescens Willd.,Roverella ,410,18,a) età e/o dimensioni,no,14.263842,42.072500
+21,01/E052/CH/13,Chieti,Gissi,Rosario Serra,"42°00'39,02''","14°33'14,00''",500,no,Quercus pubescens Willd.,Roverella ,456,15,a) età e/o dimensioni b) forma e portamento ,no,14.553889,42.039167
+22,01/E243/CH/13,Chieti,Guardiagrele,Colle Spedale,"42°11'17,86''","14°15'36,05''",480,si,Fraxinus angustifolia Vahl,Frassino meridionale ,384,8,a) età e/o dimensioni d) rarità botanica,no,14.260014,42.222500
+23,02/E243/CH/13,Chieti,Guardiagrele,Caprafico,"42°09'12,15''","14°14'11,51''",470,no,Quercus pubescens Willd.,Roverella ,425,15,a) età e/o dimensioni b) forma e portamento ,si,14.236531,42.189167
+24,01/G441/CH/13,Chieti,Perano,Ponte Pianello,"42°06'56,11''","14°23'54,07''",135,no,Quercus pubescens Willd.,Roverella ,443,17,a) età e/o dimensioni b) forma e portamento ,si,14.398353,42.139167
+25,01/H052/CH/13,Chieti,Pretoro,Fonte Cese – Valle della Madonna,"42°12'26,22''","14°06'35,99''",765,no,Castanea sativa Mill.,Castagno,360 - 188,14,"a) età e/o dimensioni g) valore storico, culturale, religioso ",no,14.109997,42.239167
+26,02/H052/CH/13,Chieti,Pretoro,Ponte - Crocifisso,"42°13'09,22''","14°09'06,91''",417,si,Quercus pubescens Willd.,Roverella ,384,19,a) età e/o dimensioni,no,14.151919,42.255833
+27,01/H184/CH/13,Chieti,Rapino,Madonna del Carpineto,"42°12'54,86''","14°11'32,96''",354,si,Quercus pubescens Willd.,Roverella ,421,19,a) età e/o dimensioni b) forma e portamento,no,14.192489,42.239167
+28,01/H424/CH/13,Chieti,Roccamontepiano,Via Montepiano,"42°14'28,06''","14°07'42,79''",500,si,Quercus pubescens Willd.,Roverella ,402,17,a) età e/o dimensioni,no,14.128553,42.272500
+29,02/H424/CH/13,Chieti,Roccamontepiano,Convento Madonna della Neve,"42°14'29,14''","14°07'21,77''",563,no,Quercus pubescens Willd.,Roverella ,390,13,a) età e/o dimensioni,no,14.122714,42.272500
+30,03/H424/CH/13,Chieti,Roccamontepiano,Pomaro,"42°16'13,03''","14°09'03,81''",300,no,Quercus pubescens Willd.,Roverella ,500,15,a) età e/o dimensioni,no,14.151058,42.305833
+31,01/H784/CH/13,Chieti,San Buono,Vallone dei Valloni,"41°59'16,11''","14°34'42,00''",340,no,Quercus pubescens Willd.,Roverella ,554,10.50,a) età e/o dimensioni,no,14.578333,42.022500
+32,01/A187/AQ/13,L'Aquila,Alfedena,Valle Porcile,"41°42'40,01"" ","13°58'07,99""",1375,no,Acer pseudoplatanus L.,Acero di monte,538,25,a) età e/o dimensioni f) pregio paesaggistico,no,13.968886,41.736389
+33,02/A187/AQ/13,L'Aquila,Alfedena,Piazza Umberto I,"41°44'04,45"" ","14°01'59,13""",900,si,Populus nigra L.,Pioppo nero,535,30,"a) età e/o dimensioni g) valore storico, culturale, religioso ",no,14.033092,41.772500
+34,03/A187/AQ/13,L'Aquila,Alfedena,Val Iavona,"41°42'35,00"" ","13°59'34,00""",1350,no,Prunus avium L.,Ciliegio selvatico,245,13.5,a) età e/o dimensioni,no,13.992778,41.736389
+35,04/A187/AQ/13,L'Aquila,Alfedena,Monte San Nicola La Rocca,"41°41'41,02"" ","14°00'21,99""",1296,no,Pyrus pyraster (L.) Burgsd.,Pero selvatico,228,22,a) età e/o dimensioni,no,14.006108,41.722500
+36,01/B677/AQ/13,L'Aquila,Cappadocia,Gole di Fosso Fioio,"41°59'08,00"" ","13°12'13,00""",967,no,Abies alba Mill.,Abete bianco,225,35,f) pregio paesaggistico,no,13.203611,42.019722
+37,02/B677/AQ/13,L'Aquila,Cappadocia,Gole di Fosso Fioio,"41°59'08,00"" ","13°12'13,00""",1037,no,Abies alba Mill.,Abete bianco,220,30,f) pregio paesaggistico,no,13.203611,42.019722
+38,03/B677/AQ/13,L'Aquila,Cappadocia,Valle di Camporotondo,"41°58'16,00"" ","13°17'24,00""",1545,no,Acer pseudoplatanus L.,Acero di monte,600,30,a) età e/o dimensioni ,no,13.290000,42.003056
+39,04/B677/AQ/13,L'Aquila,Cappadocia,Valle di Camporotondo,"41°58'17,00"" ","13°17'25,00""",1543,no,Acer pseudoplatanus L.,Acero di monte,255,25,a) età e/o dimensioni b) forma e portamento ,no,13.290278,42.003056
+40,05/B677/AQ/13,L'Aquila,Cappadocia,Valle di Camporotondo,"41°58'17,00"" ","13°17'25,00""",1576,no,Acer pseudoplatanus L.,Acero di monte,300,28,a) età e/o dimensioni b) forma e portamento,no,13.290278,42.003056
+41,06/B677/AQ/13,L'Aquila,Cappadocia,Valle di Camporotondo,"41°58'14,00"" ","13°17'24,00""",1576,no,Acer pseudoplatanus L.,Acero di monte,440,30,a) età e/o dimensioni,no,13.290000,42.003056
+42,07/B677/AQ/13,L'Aquila,Cappadocia,Valle di Camporotondo,"41°58'12"" ","13°17'26""",1571,no,Acer pseudoplatanus L.,Acero di monte,670,35,a) età e/o dimensioni,no,13.290556,42.003056
+43,01/C083/AQ/13,L'Aquila,Castel del Monte,Codorama,"42°23'32,03"" ","13°46'14,16""",1432,no,Taxus baccata L.,Tasso,580,7,a) età e/o dimensioni b) forma e portamento ,no,13.770600,42.419722
+44,02/C083/AQ/13,L'Aquila,Castel del Monte,Via Roma,"42°21'53,86"" ","13°43'34,10""",1472,si,Populus nigra L.,Pioppo nero,418,16,"a) età e/o dimensioni g) valore storico, culturale, religioso ",no,13.726139,42.386389
+45,01/D465/AQ/13,L'Aquila,Fagnano Alto,Ripa," 42°15'52,97"" ","13°34'38,14""",656,no,Quercus pubescens Willd.,Roverella ,431,20,a) età e/o dimensioni b) forma e portamento c) valore ecologico e) architettura vegetale ,no,13.577261,42.286389
+46,02/D465/AQ/13,L'Aquila,Fagnano Alto,Pagliare,"42°13'30,00"" ","13°34'14,00""",1141,no,Quercus crenata Lam.,Cerro-sughera,130,10,c) valore ecologico d) rarità botanica f) pregio paesaggistico,no,13.570556,42.253056
+47,03/D465/AQ/13,L'Aquila,Fagnano Alto,Campo Casoli,"42°14'45,40"" ","13°53'18,64""",708,no,Quercus pubescens Willd.,Roverella ,350,15,a) età e/o dimensioni f) pregio paesaggistico,no,13.888511,42.269722
+48,01/F022/AQ/13,L'Aquila,Massa d'Albe,Via del Pino,"42°06'24,98"" ","13°23'36,89""",865,si,Pinus pinea L.,Pino domestico,305,18,a) età e/o dimensioni f) pregio paesaggistico,no,13.393581,42.136389
+49,01/F852/AQ/13,L'Aquila,Navelli,La Francesca,"42°16'10,16"" ","13°44'16,20""",551,no,Olea europaea L.,Olivo,1070,10,a) età e/o dimensioni b) forma e portamento ,no,13.737833,42.303056
+50,01/I326/AQ/13,L'Aquila,Sante Marie,Colle Civitella,"42°06'49,00"" ","13°11'45,00""",960,no,Castanea sativa Mill.,Castagno,860,25,a) età e/o dimensioni,no,13.195833,42.136389
+51,02/I326/AQ/13,L'Aquila,Sante Marie,Santo Stefano,"42°07'13,12"" ","13°13'41,75""",1050,si,Quercus pubescens Willd.,Roverella ,343,20,a) età e/o dimensioni,no,13.228264,42.153056
+52,03/I326/AQ/13,L'Aquila,Sante Marie,Scanzano,"42°06'04,00"" ","13°15'38,00""",830,no,Quercus pubescens Willd.,Roverella ,370,25,a) età e/o dimensioni,no,13.260556,42.136389
+53,01/M021/AQ/13,L'Aquila,Villa Santa Lucia degli Abruzzi,Pitraflora,"42°20'18,71"" ","13°48'04,15""",1618,no,Fagus sylvatica L.,Faggio,480,20,a) età e/o dimensioni b) forma e portamento ,no,13.801153,42.369722
+54,01/C474/PE/13,Pescara,Cepagatti,Pastini,"42°21'47,18''","14°04'04,03''",164,si,Quercus pubescens Willd.,Roverella ,430,16,a) età e/o dimensioni f) pregio paesaggistico,no,14.067786,42.389167
+55,01/C779/PE/13,Pescara,Civitella Casanova,Madonna delle Grazie,"42°23'55,02''","13°54'23,03''",515,no,Zelkova carpinifolia (Pall.) K. Koch,Olmo del Caucaso,440,21,a) età e/o dimensioni d) rarità botanica,no,13.906397,42.419722
+56,02/C779/PE/13,Pescara,Civitella Casanova,San Giuseppe,"42°23'07,23''","13°53'59,65''",550,no,Quercus pubescens Willd.,Roverella ,365,23,a) età e/o dimensioni,no,13.899903,42.419722
+57,03/C779/PE/13,Pescara,Civitella Casanova,Colle Tabernacolo,"42°22'53,98''","13°53'47,09''",550,no,Quercus pubescens Willd.,Roverella ,550,18,a) età e/o dimensioni b) forma e portamento,no,13.896414,42.403056
+58,01/E691/PE/13,Pescara,Loreto Aprutino,Passo Cordone - Strada Statale 81,"42°24'07,66''","13°57'17,48''",160,si,Quercus pubescens Willd.,Roverella ,635,24,a) età e/o dimensioni,no,13.954856,42.436389
+59,01/L186/PE/13,Pescara,Tocco da Casauria,Madonna degli Angeli,"42°14'15,98''","13°55'44,08''",195,si,Pinus pinea L.,Pino domestico,390,29,a) età e/o dimensioni b) forma e portamento ,no,13.928911,42.269722
+60,02/L186/PE/13,Pescara,Tocco da Casauria,Tremonti,"42°12'22,02''","13°53'55,99''",300,no,Quercus pubescens Willd.,Roverella ,470,15,a) età e/o dimensioni e) architettura vegetale ,no,13.898886,42.236389
+61,01/A488/TE/13,Teramo,Atri,Viale Aldo Moro,"42°34'26,90''","13°59'48,17''",400,si,Quercus pubescens Willd.,Roverella ,320,18,a) età e/o dimensioni f) pregio paesaggistico,si ,13.996714,42.603056
+62,01/C316/TE/13,Teramo,Castiglione M.R.,Case Cerquone,"42°32'48,56''","13°50'40,40''",350,no,Quercus pubescens Willd.,Roverella ,450,20,a) età e/o dimensioni b) forma e portamento f) pregio paesaggistico ,no,13.844556,42.569722
+63,02/C316/TE/13,Teramo,Castiglione M.R.,Bozzano,"42°30'03,85''","13°50'48,22''",400,no,Quercus pubescens Willd.,Roverella ,450,17,a) età e/o dimensioni f) pregio paesaggistico,no,13.846728,42.536389
+64,01/D489/TE/13,Teramo,Fano Adriano,Iaccio delle Vacche,"42°30'58,11''","13°29'53,14''",1540,no,Fagus sylvatica L.,Faggio,383,20,a) età e/o dimensioni,si ,13.498094,42.536389
+65,02/D489/TE/13,Teramo,Fano Adriano,Iaccio delle Vacche,"42°30'49,99''","13°29'55,99''",1560,no,Fagus sylvatica L.,Faggio,430,20,a) età e/o dimensioni,si,13.498886,42.536389
+66,03/D489/TE/13,Teramo,Fano Adriano,Iaccio delle Vacche,"42°30'46,11''","13°29'51,99''",1605,no,Fagus sylvatica L.,Faggio,465,20,a) età e/o dimensioni,si,13.497775,42.536389
+67,04/D489/TE/13,Teramo,Fano Adriano,Iaccio delle Vacche,"42°30'44,16''","13°29'53,07''",1620,no,Fagus sylvatica L.,Faggio,486,20,a) età e/o dimensioni,si,13.498075,42.536389
+68,05/D489/TE/13,Teramo,Fano Adriano,Cerqueto,"42°32'46,91''","13°33'47,67''",695,no,Quercus pubescens Willd.,Roverella ,400,13,a) età e/o dimensioni,si,13.563242,42.569722
+69,06/D489/TE/13,Teramo,Fano Adriano,Cerqueto,"42°32'54,02''","13°33'54,05''",700,no,Quercus pubescens Willd.,Roverella ,400,13,a) età e/o dimensioni,si,13.565014,42.569722
+70,07/D489/TE/13,Teramo,Fano Adriano,Cerqueto,"42°32'45,03''","13°33'46,07''",695,no,Quercus pubescens Willd.,Roverella ,330,13,a) età e/o dimensioni,si,13.562797,42.569722
+71,08/D489/TE/13,Teramo,Fano Adriano,Cerqueto,"42°32'46,03''","13°33'59,85''",790,si,Quercus pubescens Willd.,Roverella ,400,21,a) età e/o dimensioni,si,13.566625,42.569722
+72,09/D489/TE/13,Teramo,Fano Adriano,Le Vigne,"42°33'05,99''","13°33'43,01''",595,no,Quercus pubescens Willd.,Roverella ,360,12,a) età e/o dimensioni,si,13.561947,42.586389
+73,10/D489/TE/13,Teramo,Fano Adriano,Cesanergia,"42°30'48,71''","13°29'42,20''",1565,no,Fagus sylvatica L.,Faggio,430,18,a) età e/o dimensioni,si,13.495056,42.536389

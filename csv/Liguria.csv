@@ -1,0 +1,94 @@
+ID,N. SCHEDA,PROVINCIA,COMUNE,LOCALITÀ,LATITUDINE su GIS,LONGITUDINE su GIS,ALTITUDINE (m s.l.m.),CONTESTO URBANO sì/no,NOME SCIENTIFICO,NOME VOLGARE,CIRCONFERENZA FUSTO (cm),ALTEZZA (m),CRITERI DI MONUMENTALITÀ,PROPOSTA DICHIARAZIONE NOTEVOLE INTERESSE PUBBLICO,longitude,latitude
+1,01/A388/GE/07,Genova,Arenzano,Villa Pallavicini,"44°24'04,20""","8°40'53,76""",10,si,Cedrus libani A. Richard,Cedro del Libano,350,25,d) rarità botanica,no,8.681600,44.422500
+2,02/A388/GE/07,Genova,Arenzano,Villa Pallavicini,"44°24'06,00""","8°41'01,00""",12,si,Cinamomum glanduliferum (Wall.) Meisn.,Falsa canfora,350,15,a) età e/o dimensioni ,no,8.683611,44.422500
+3,03/A388/GE/07,Genova,Arenzano,La Colletta,"44°23'58,05""","8°39'48,53""",50,si,Pinus pinea L.,Pino domestico,390,18,a) età e/o dimensioni ,no,8.663481,44.405833
+4,01/B067/GE/07,Genova,Borzonasca,Il Poggio,"44°26'358,65""","9°20'35,05""",675,no,Castanea sativa Mill.,Castagno,800,11,a) età e/o dimensioni ,no,9.343069,44.458611
+5,02/B067/GE/07,Genova,Borzonasca,Abbazia di Borzone,"44°25'24,78""","9°24'36,95""",335,no,Cupressus sempervirens L.,Cipresso comune,325,26,a) età e/o dimensioni ,no,9.410264,44.441944
+6,01/B956/GE/07,Genova,Casella,"Via Fieschi, 45","44°32'14,44""","8°59'48,05""",428,si,Cedrus libani A. Richard,Cedro del Libano,440,30,a) età e/o dimensioni ,no,8.996681,44.555833
+7,01/D969/GE/07,Genova,Genova,Nervi - Villa Gropallo,"44°22'54,76""","9°02'47,12""",32,si,Jubaea chilensis Johow.,Palma gigante del Cile,396,15,a) età e/o dimensioni d) rarità botanica,no ,9.046422,44.391944
+8,02/D969/GE/07,Genova,Genova,Villa Brignole Sale Duchessa di Galliera,"44°25'47,37""","8°45'02,34''",26,si,Platanus orientalis L.,Platano orientale,497,27,a) età e/o dimensioni d) rarità botanica,no,8.750650,44.439167
+9,03/D969/GE/07,Genova,Genova,Nervi - Salita Morelli 8/11,"44°23'08,78''","9°02'09,62''",50,si,Schinus molle L.,Falso pepe,213-186,12.5,a) età e/o dimensioni d) rarità botanica,no ,9.036006,44.408611
+10,04/D969/GE/07,Genova,Genova ,Nervi - Villa Groppallo,"44°22'57,46''","9°02'36,57'",29,si,Araucaria bidwillii Hook.,Pino del Qeensland,608,28,a) età e/o dimensioni d) rarità botanica,no,9.043492,44.391944
+11,05/D969/GE/07,Genova,Genova ,Sant'Ilario,"44°23'05,75""","9°03'17,73""",190,si,Quercus ilex L.,Leccio,352,18,a) età e/o dimensioni ,no,9.054925,44.408611
+12,01/F858/GE/07,Genova,Ne,Gosita,"44°20'49,23""","9°26'24,59''",420,no,Quercus pubescens Willd.,Roverella,495,18,a) età e/o dimensioni ,no,9.440164,44.358611
+13,01/H183/GE/07,Genova,Rapallo,Chiesa di Nostra Signora Assunta - Santa Maria del Campo,"44°21'28,77''","9°11'38,01''",49,si,Quercus ilex L.,Leccio,417,25,a) età e/o dimensioni ,no,9.193892,44.375278
+14,02/H183/GE/07,Genova,Rapallo,"Golf Club di Rapallo -Via Goffredo Mameli, 377","44°21'06,55''","9°12'47,66''",40,si,Liriodendron tulipifera L.,Albero dei tulipani,380,33.5,a) età e/o dimensioni d) rarità botanica,no,9.213239,44.375278
+15,03/H183/GE/07,Genova,Rapallo,Chiesa dI Nostra Signora di Montallegro,"44°22'09,37''","9°15'13,53''",590,no,Insieme omogeneo di Quercus ilex L.,Leccio,160 (med) 250 (max),"11,0 (med) 16,0 (max)",e) architettura vegetale f) pregio paesaggistico,si,9.253758,44.391944
+16,04/H183/GE/07,Genova,Rapallo,Villa Tigullio - Parco Comunale L. Casale,"44°20'46,40''","9°14'21,23''",20,si,Cinamomum glanduliferum (Wall.) Meisn.,Falsa canfora,487,27,a) età e/o dimensioni ,no,9.239231,44.358611
+17,05/H183/GE/07,Genova,Rapallo,Villa Tigullio - Parco Comunale L. Casale,"44°20'46,51''","9°14'18,99''",20,si,Eucaliptus globulus Labill.,Eucalitto,530,30,a) età e/o dimensioni ,no,9.238608,44.358611
+18,06/H183/GE/07,Genova,Rapallo,Villa Tigullio - Parco Comunale L. Casale,"44°20'48,01'","9°14'22,97''",20,si,Cupressus macrocarpa Hartw.,Cipresso di Monterey,631,25,a) età e/o dimensioni ,no,9.239714,44.358611
+19,01/I368/GE/07,Genova,Santo Stefano d'Aveto,Allegrezze,"44°31'52,58''","9°26'13,34''",920,no,Sequoiadendron giganteum (Lindl.) J. Buchholz,Sequoia gigante,475,18,a) età e/o dimensioni ,no,9.437039,44.541944
+20,01/L167/GE/07,Genova,Tiglieto,Ponte Medievale,"44°31'36,00''","8°36'30,00""",380,no,Quercus petraea (Matt.) Liebl.,Rovere,460,15,a) età e/o dimensioni ,no,8.608333,44.539167
+21,02/L167/GE/07,Genova,Tiglieto,Badia,"44°31'15,00''","8°36'16,00""",400,no,Insieme omogeneo di Cedrus atlantica (Endl) Carrière,Cedro dell'Atlante,420,38,a) età e/o dimensioni ,no,8.604444,44.539167
+22,01/M105/GE/07,Genova,Vobbia,Vallenzona - Costa,"44°36'07,00''","9°05'19,00''",720,no,Castanea sativa Mill.,Castagno,648-186-130,15,a) età e/o dimensioni ,no,9.088611,44.625278
+23,01/A984/IM/07,Imperia,Bordighera,"Museo Bcknell -Via Romana, 39","43°46'55,27""","7°40'04,16""",28,si,Wisteria sinensis (Sims) Sweet,Glicine,160,7.5,a) età e/o dimensioni b) forma e portamento ,no,7.667822,43.786389
+24,02/A984/IM/07,Imperia,Bordighera,"Museo Bcknell -Via Romana, 39","43°46'55,12""","7°40'02,66""",25,si,Ficus macrophylla Desf.ex Pers.,Fico magnolioide ,975,20,a) età e/o dimensioni d) rarità botanica,no,7.667406,43.786389
+25,03/A984/IM/07,Imperia,Bordighera,Palazzo comunale,"43°46'45,77""","7°40'21,30""",20,si,Ficus macrophylla Desf.ex Pers.,Fico magnolioide ,1180,14,a) età e/o dimensioni d) rarità botanica,no,7.672583,43.786389
+26,04/A984/IM/07 ,Imperia,Bordighera,"Museo Bcknell -Via Romana, 39","43°46'55,28""","7°40'02,14""",26,si,Ficus macrophylla Desf.ex Pers.,Fico magnolioide ,1020,22,a) età e/o dimensioni d) rarità botanica,no,7.667261,43.786389
+27,05/A984/IM/07,Imperia,Bordighera,Lungomare Argentina,"43°46'39,21""","7°40'00,24""",1,si,Insieme omogeneo di Araucaria araucana (Molina) K. Koch,Pino del Cile,180 (med) 290 (max),"20,0 (med) 30,0 (max)",d) rarità botanica f) pregio paesaggistico,si,7.666733,43.786389
+28,06/A984/IM/07 ,Imperia,Bordighera,Via Tumiati angolo Via Romana,"43°46'52,85""","7°40'13,22""",21,si,Pinus canariensis Chr. P. Sim.,Pino delle Canarie,390,40,a) età e/o dimensioni d) rarità botanica,no,7.670339,43.786389
+29,01/B020/IM707,Imperia,Borgomaro,Maro Castello - Prato della Corte,"43°58'14,26''"," 7°56'16,81''",295,no,Quercus pubescens Willd.,Roverella,332,19,a) età e/o dimensioni ,no,7.938003,43.986389
+30,02/B020/IM707,Imperia,Borgomaro,Maro Castello - Prato della Corte,"43°58'13,00''","7°56'16,88''",295,no,Quercus pubescens Willd.,Roverella,332,19,a) età e/o dimensioni ,no,7.938022,43.986389
+31,03/B020/IM/07,Imperia,Borgomaro,Conio - Vallone,"43°58'35,40""","7°54'10,37''",622,no,Quercus pubescens Willd.,Roverella,427,30,a) età e/o dimensioni ,no,7.902881,43.986389
+32,01/D319/IM/07,Imperia,Dolcedo,Costa Carnara - Nuffian,"43°53'43,37''","7°56'57,08''",160,no,Olea europaea L.,Olivo,155-150-330-51-115-220-190-181,13,a) età e/o dimensioni ,no,7.949189,43.903056
+33,01/E290/IM/07,Imperia,Imperia,"Palazzo della Provincia - Viale Giacomo Matteotti, 147","43°52'59,02"""," 8°01'18,70''",35,si,Araucaria bidwillii Hook.,Pino del Qeensland,345,26,a) età e/o dimensioni d) rarità botanica,no,8.021861,43.889167
+34,01/I138/IM/07,Imperia,Sanremo,"Poggio - Via Val d'Olivi, 248","43°49'36,5''","7°48'41,09''",129,no,Olea europaea L.,Olivo,360-580,12,"a) età e/o dimensioni g) valore storico, culturale, religioso ",si,7.811414,43.836389
+35,02/N544/IM/07,Imperia,Sanremo,Parco Marsaglia,"43°48'48,24''","7°46'01,24''",20,si,Jubaea chilensis Johow.,Palma gigante del Cile,334,12,a) età e/o dimensioni d) rarità botanica,no,7.767011,43.819722
+36,03/N544/IM/07,Imperia,Sanremo,Giardini A. Nobel,"43°49'16,68''","7°47'22,49''",10,si,Phoenix reclinata Jacq,Palma del Senegal,830,19,a) età e/o dimensioni d) rarità botanica,no,7.789581,43.836389
+37,04/N544/IM/07,Imperia,Sanremo,Zampillo - Corso Orazio Raimondo,"43°49'04,22''","7°46'46,92''",10,si,Insieme omogeneo di Washingtonia filifera (Linden) H. Wendl.,Palma californiana ,250 (med) 350 (max),"15,0 (med) 18,0 (max)",a) età e/o dimensioni f) pregio paesaggistico,si,7.779700,43.836389
+38,01/L430/IM/07,Imperia,Triora,Chiesa di Sant'Agostino,"43°59'41,24''","7°45'46,67''",820,no,Aesculus hippocastanum L.,Ippocastano,390,25,a) età e/o dimensioni ,no,7.762964,44.003056
+39,02/L430/IM/07,Imperia,Triora,Chiesa di Sant'Agostino,"43°59'41,52''","7°45'47,03''",820,no,Aesculus hippocastanum L.,Ippocastano,362,28,a) età e/o dimensioni ,no,7.763064,44.003056
+40,03/L430/IM/07,Imperia,Triora,Borniga - Case Abetin,"44° 1' 42,96''","7°41'27,38''",1388,no,Acer pseudoplatanus L.,Acero di monte,165 + 30 polloni,24,a) età e/o dimensioni b) forma e portamento,no,7.690939,44.036389
+41,04/L430/IM/07,Imperia,Triora,Chiesa di San Bernardino,"43°59'30,41''","7°45'50,46''",730,no,Aesculus hippocastanum L.,Ippocastano,310,20,a) età e/o dimensioni ,no,7.764017,44.003056
+42,01/L741/IM/07,Imperia,Ventimiglia,Villa Hanbury - pressi casa padronale,"43°47'00,57''","7°33'18,07''",76,no,Cupressus lusitanica Mill.,Cipresso messicano,520,17,a) età e/o dimensioni d) rarità botanica,no,7.555019,43.803056
+43,02/L741/IM/07,Imperia,Ventimiglia,Villa Hanbury - pressi casa padronale,"43°47'00,41''","7°33'16,78''",70,no,Araucaria cunninghamii Alton ex D. Don,Pino della baia di Moreton ,260,22,"d) rarità botanica g) valore storico, culturale, religioso ",no,7.554661,43.803056
+44,01/E463/SP/07,La Spezia,La Spezia,La Gira,"44°07'18,55''","9°47'34,11''",230,si,Quercus ilex L.,Leccio,400,16,a) età e/o dimensioni f) pregio paesaggistico,si,9.792808,44.141944
+45,02/E463/SP/07,La Spezia,La Spezia,Stazione FF.SS. - Via Paleocapa ,"44°06'39,04""","9°48'51,29""",15,si,Platanus acerifolia (Alton) Willd.,Platano comune,412,21,a) età e/o dimensioni ,no,9.814247,44.125278
+46,03/E463/SP/07 ,La Spezia,La Spezia,"Termo - Via Sarzana, 932","44°07°00,92""","9°52'46,21""",27,si,Magnolia grandiflora L.,Magnolia,330,25,a) età e/o dimensioni ,no,9.879503,44.141944
+47,01/E542/SP/07 ,La Spezia,Lerici,Piazza Giuseppe Garibaldi,"44°04'26,32""","9°54'33,63""",1,si,Tamarix gallica L.,Tamerice,265,3,a) età e/o dimensioni ,no,9.909342,44.091944
+48,02/F609/SP/07 ,La Spezia,Monterosso,Santuario Madonna di Soviore," 44°09'37,05""","9°39'48,58''",495,no,Insieme omogeneo di Quercus ilex L.,Leccio,280 (med) 350 (max),"15,0 (med) 18,0 (max)"," f) pregio paesaggistico g) valore storico, culturale, religioso ",si,9.663494,44.175278
+49,04/F609/SP/07,La Spezia,Monterosso,Cimitero comunale,"44°08'46,54''","9°39'08,83''",90,si,Pistacia terebintus L.,Terebinto,160,10,"e) architettura vegetale g) valore storico, culturale, religioso ",si,9.652453,44.158611
+50,01/G925/SP/07,La Spezia,Portovenere,Isola Palmaria - Centro Educazione Ambientale,"44°02'37,08''","9°50'24,60''",120,no,Pinus pinea L.,Pino domestico,372,16.5,f) pregio paesaggistico ,si,9.840167,44.058611
+51,01/H461/SP/07,La Spezia,Rocchetta di Vara,Molino Rotato - Pirolo,"44°16'56,26''","9°46'52,46''",710,no,Quercus pubescens Willd.,Roverella,513,14.5,a) età e/o dimensioni ,no,9.781239,44.291944
+52,01/L449/SP/07 ,La Spezia,Sarzana,Vecchio ospedale - Via Agostino Paci ,"44°06'48,37""","9°57'47,43""",25,si,Cinamomum glanduliferum (Wall.) Meisn.,Falsa canfora,361,20,a) età e/o dimensioni d) rarità botanica,no,9.963175,44.125278
+53,01/L681/SP/07 ,La Spezia,Varese Ligure,Lupo morto,"44°20'54,23""","9°36'47,92""",480,no,Arbutus unedo L.,Corbezzolo,165,7,a) età e/o dimensioni b) forma e portamento,no,9.613311,44.358611
+54,02/L681/SP/07 ,La Spezia,Varese Ligure,Case Begagin - Taglieto,"44°25'32,41""","9°35'26,56""",1030,no,Fagus sylvatica L.,Faggio,410,22,a) età e/o dimensioni ,no,9.590711,44.441944
+55,03/L681/SP/07 ,La Spezia,Varese Ligure,Sorgenti del Vara,"44°24'00,71""","9°28'32,15""",1000,no,Fagus sylvatica L.,Faggio,235,17,b) forma e portamento ,no,9.475597,44.425278
+56,04/L681/SP/07 ,La Spezia,Varese Ligure,Pecorara,"44°25'30,82""","9°35'27,12""",1030,no,Laburnum anagyroides Medik.,Maggiociondolo,320,13,a) età e/o dimensioni ,no,9.590867,44.441944
+57,05/L681/SP/07 ,La Spezia,Varese Ligure,Cesena,"44°21'52,16""","9°35'00,73""",430,si,Quercus pubescens Willd.,Roverella,405,25,a) età e/o dimensioni ,no,9.583536,44.375278
+58,06/L681/SP/07,La Spezia,Varese Ligure,Casareggio,"44°25'01,44""","9°32'09,32""",650,si,Quercus crenata Lam.,Cerro-sughera,560,16,a) età e/o dimensioni ,no,9.535922,44.441944
+59,01/L774/SP/07,La Spezia,Vernazza,Santuario Nostra Signora di Reggio,"44°08'35,05""","9°41'15,29""",320,no,Cupressus sempervirens L.,Cipresso comune,400,23,a) età e/o dimensioni e) architettura vegetale ,si,9.687581,44.158611
+60,02/L774/SP/07,La Spezia,Vernazza,Santuario Nostra Signora di Reggio,"44°08'35,84""","9°41'15,33""",320,no,Insieme omogeneo di Quercus ilex L.,Leccio ,300 (med) 350 (max),"18,0 (med) 21,0 (max)",e) architettura vegetale f) pregio paesaggistico,si,9.687592,44.158611
+61,01/A226/SV/07,Savona,Altare,Li Piani,"44°19'45,04""","8°20'06,57""",400,si,Sequoia sempervirens (D. Don) Endl.,Sequoia sempreverde,570,38,a) età e/o dimensioni d) rarità botanica,no,8.335158,44.339167
+62,02/A226/SV/07,Savona,Altare,Li Piani,"44°19'45,32""","8°20'06,92""",400,si,Abies nordmanniana (Steven) Spach,Abete del Caucaso,350,34,a) età e/o dimensioni d) rarità botanica,no,8.335256,44.339167
+63,01/A647/SP/07,Savona,Bardineto,Costa Abeti,"44°12'07,97""","8°09'50,36""",1085,no,Fagus sylvatica L.,Faggio,430,21,a) età e/o dimensioni ,no,8.163989,44.222500
+64,02/A647/SP/07,Savona,Bardineto,Fonte del Gombino,"44°11'02,59""","8°11'11,44""",1100,no,Abies alba Mill.,Abete bianco,385,27,a) età e/o dimensioni ,no,8.186511,44.205833
+65,03/A647/SP/07,Savona,Bardineto,Fonte del Gombino,"44°11'03,85""","8°11'05,78""",1070,no,Abies alba Mill.,Abete bianco,389,31,a) età e/o dimensioni ,no,8.184939,44.205833
+66,01/B048/SV/07,Savona,Bormida,Palazzo Pertini - Ferriera,"44°16'05,38""","8°13'49,19""",520,si,Ilex aquifolium L.,Agrifoglio,163,7,a) età e/o dimensioni ,no,8.230331,44.289167
+67,02/B048/SV/07,Savona,Bormida,Resi,"44°17'08,78""","8°14'15,06""",630,si,Aesculus hippocastanum L.,Ippocastano,350,20,a) età e/o dimensioni ,no,8.237517,44.305833
+68,01/B369/SV/07,Savona,Cairo Montenotte,Traversine,"44°23'02,46""","8°23'49,88""",700,no,Fagus sylvatica L.,Faggio,435,32,a) età e/o dimensioni ,no,8.397189,44.405833
+69,02/B369/SV/07,Savona,Cairo Montenotte,Cascina Miera - Castellazzo,"44°23'22,56""","8°22'51,38""",730,no,Fagus sylvatica L.,Faggio,460,37,a) età e/o dimensioni ,no,8.380939,44.405833
+70,01/B409/SV/07,Savona,Calice Ligure,Carbuta,"44°13'14,18""","8°18'07,83""",337,si,Quercus ilex L.,Leccio,580,22,a) età e/o dimensioni ,no,8.302175,44.239167
+71,01/B416/SV/07,Savona,Calizzano,Coletti,"44°14'20,69''","8°10'29,71''",898,no,Fagus sylvatica L.,Faggio,360,40.5,a) età e/o dimensioni ,no,8.174919,44.255833
+72,02/B416/SV/07,Savona,Calizzano,Rio Nero,"44°13'45,71''","8°06'50,14''",665,no,Castanea sativa Mill.,Castagno,920,18.5,a) età e/o dimensioni ,no,8.113928,44.239167
+73,01/C443/SV/07,Savona,Celle Ligure,Via Natta,"44°21'00,81""","8°33'34,66""",42,si,Quercus suber L.,Sughera,405,15,a) età e/o dimensioni ,no,8.559628,44.372500
+74,01/D600/SV/07,Savona,Finale Ligure,Valle Aquila,"44°11'02,54""","8°19'18,88""",80,no,Pinus pinea L.,Pino domestico,475,24,a) età e/o dimensioni f) pregio paesaggistico,si,8.321911,44.205833
+75,02/D600/SV/07,Savona,Finale Ligure,"Casa Rocchinotti - Via Domenico Brunenghi, 114","44°10'23,46""","8°20'01,19""",10,si,Magnolia grandiflora L.,Magnolia,365,20,a) età e/o dimensioni b) forma e portamento,no,8.333664,44.189167
+76,01/D927/SV/07,Savona,Garlenda,San Rocco,"44°01'52,86""","8°06'47,20""",44,si,Quercus pubescens Willd.,Roverella,480,22.5,a) età e/o dimensioni ,no,8.113111,44.039167
+77,01/E064/SV/07,Savona,Giustenice,Piazza Don Noli,"44°10'20,96''","8°14'33,25''",30,si,Cupressus sempervirens L.,Cipresso comune,390,21,a) età e/o dimensioni ,no,8.242569,44.189167
+78,02/E064/SV/07,Savona,Giustenice,Piazza Don Noli,"44°10'21,30''","8°14'33,37''",30,si,Quercus ilex L.,Leccio,270,19,e) architettura vegetale f) pregio paesaggistico,si,8.242603,44.189167
+79,01/E860/SV/07,Savona,Mallare,Ferriera di Codevilla,"44°16'51,64""","8°15'55,20""",500,no,Thuja plicata L.,Tuia gigante,360,31,a) età e/o dimensioni d) rarità botanica,no,8.265333,44.289167
+80,02/E860/SV/07,Savona,Mallare,Benevento,"44°15'51,18""","8°17'37,53""",750,no,Insieme omogeneo di Fagus sylvatica L.,Faggio,492 (med) 760 (max),"30,0 (med) 30,0 (max)",a) età e/o dimensioni ,no,8.293758,44.272500
+81,01/G542/SV/07,Savona,Piana Crixia,Erche - Case Tappe,"44°31'10,21""","8°15'29,23""",530,no,Castanea sativa Mill.,Castagno,630,11,a) età e/o dimensioni ,no,8.258119,44.539167
+82,02/G542/SV/07,Savona,Piana Crixia,Nizzè,"44°29'35,92""","8°14'10,55""",640,no,Quercus petraea (Matt.) Liebl.,Rovere,315,15.5, b) forma e portamento ,no,8.236264,44.505833
+83,01/G605/SV/07,Savona,Pietra Ligure,Pinee,"44°08'34,02""","8°15'41,14""",50,no,Ceratonia siliqua L.,Carrubo,345,13,a) età e/o dimensioni ,no,8.261428,44.155833
+84,02/G605/SV/07,Savona,Pietra Ligure,Piazza Vittorio Emanuele II,"44°08'55,31""","8°16'53,88""",10,si,Phoenix dactylifera L.,Palma da datteri,260,24,a) età e/o dimensioni d) rarità botanica,no,8.281633,44.155833
+85,03/G605/SV/07,Savona,Pietra Ligure,Trabocchetto - Via della Cornice,"44°09'00,17""","8°16'54,79""",30,si,Insieme omogeneo di Celtis australis L.,Bagolaro,290 (med) 330 (max),"22,0 (med) 22,0 (max)", b) forma e portamento f) pregio paesaggistico,si,8.281886,44.172500
+86,01/H266/SV/07,Savona,Rialto,Chiesa di San Pietro,"44°13'34,72""","8°15'50,55""",362,no,Cedrus deodara (D.Don) G. Don,Cedro dell'Himalaya,370,26,e) architettura vegetale f) pregio paesaggistico,si,8.264042,44.239167
+87,01/L453/SV/07,Savona,Sassello,Pianpaludo - Miculla,"44°28'13,93""","8°35'12,60""",890,no,Tilia platyphyllos Scop.,Tiglio nostrale,445,25,a) età e/o dimensioni ,no,8.586833,44.489167
+88,01/L480/SV/07,Savona,Savona,Pian del Merlo,"44°21'38,76""","8°21'37,37""",485,no,Quercus crenata Lam.,Cerro-sughera,250,21,d) rarità botanica ,no,8.360381,44.372500
+89,02/L480/SV/07,Savona,Savona,Trincata,"44°21'56,73""","8°23'06,03""",260,no,Picea abies (L.) H. Karst.,Abete rosso,325,39,a) età e/o dimensioni ,no,8.385008,44.372500
+90,05/L480/SV/07,Savona,Savona,"Varnazzino - Via Beato Antonio Botta, 35","44°19'36,15''","8°27'59,81''",85,si,Pinus pinea L.,Pino domestico,400,21,a) età e/o dimensioni ,no,8.466614,44.339167
+91,01/D927/SV/07,Savona,Spotorno,Mogge,"44°14'28,03''","8°23'44,59''",256,no,Quercus ilex L.,Leccio,235,15, b) forma e portamento ,no,8.395719,44.255833
+92,01/L499/SV/07,Savona,Urbe,Gatazzè,"44°29'42,73""","8°38'59,49""",730,no,Taxus baccata L.,Tasso,320,15,a) età e/o dimensioni c) valore ecologico ,no,8.649858,44.505833
+93,01/M197/SV/07,Savona,Zuccarello,Piazza della Posta,"44°06'35,70''","8°06'58,18''",120,si,Cedrus atlantica (Endl) Carrière,Cedro dell'Atlante,310,30,e)architettura vegetale f) pregio paesaggistico,si,8.116161,44.122500
