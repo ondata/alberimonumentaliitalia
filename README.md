@@ -31,6 +31,7 @@ for filename in os.listdir('./'):
 - 01/I216/CT/19 ha lat e lon invertite
 - colonne nascoste
 - inutili righe di intestazione
+- nel file Sicilia c'è scritto Abruzzo e c'è una riga di intestazione in più
 
 # Da fare
 
