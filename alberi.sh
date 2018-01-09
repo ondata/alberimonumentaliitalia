@@ -4,6 +4,7 @@
 # curl
 # jq
 # csvkit
+# pyexcel
 # perl (di solito preinstallato)
 ### requirements ###
 
@@ -15,6 +16,7 @@ cartella=$(pwd)
 mkdir -p "$cartella"/ods
 mkdir -p "$cartella"/csv
 
+<<comment1
 # svuoto la cartella dove inserirò i file di download
 rm "$cartella"/ods/*.ods
 
@@ -24,7 +26,7 @@ curl -L "https://www.politicheagricole.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPag
 # rimuovo la prima riga
 sed -i '1d' "$cartella"/file.csv
 
-# scarico i file elencati nell'anagrafica, ovvero in file.csv
+# scarico i file elencati nell'anagrafica, ovvero quelli del file file.csv
 INPUT="$cartella"/file.csv
 OLDIFS=$IFS
 IFS=,
@@ -35,11 +37,14 @@ do
 done < $INPUT
 IFS=$OLDIFS
 
+comment1
+
 rm "$cartella"/file.csv
 
 # rimuovo vecchi file CSV
 rm "$cartella"/csv/*.csv; 
 
+# converto tutti i file .ods in csv
 for i in "$cartella"/ods/*.ods; 
  do 
   #creo una variabile che uso per estrarre nome e estensione
@@ -51,6 +56,7 @@ for i in "$cartella"/ods/*.ods;
   pyexcel transcode --sheet-index 0 "$i" "$cartella"/csv/"$filename".csv
 done
 
+# pulisco e ristrutturo i csv di output
 for i in "$cartella"/csv/*.csv; 
  do 
   filename=$(basename "$i")
@@ -71,6 +77,7 @@ for i in "$cartella"/csv/*.csv;
   sed -i -r 's/ +/ /g' "$i"
 done
 
+# convero le coordinate in formato numerico, ad esempio da 14°21'48,11'' a 14.363611
 for i in "$cartella"/csv/*.csv; 
  do
   filename=$(basename "$i")
@@ -78,7 +85,7 @@ for i in "$cartella"/csv/*.csv;
   filename="${filename%.*}"
   # estraggo soltanto le colonne con latitude e longitude e poi sostituisco il decimale da "," a ".", 
   # converto il carattere "°" in "d", e estraggo via regex i dati geografici in una modalità leggibile
-  csvsql -I --query 'select "LONGITUDINE su GIS" as longitude, "LATITUDINE su GIS" as latitude from '"$filename"'' "$i" | sed 's/°/d/g;s/,/./g' |perl -ne '/^[^0-9]{1,5}([0-9]{1,3})(d ?)([0-9]{1,2})([^0-9]{1,5})([0-9]{1,2}\.?[0-9]{0,2})([^0-9]+)([0-9]{1,3})(d ?)([0-9]{1,2})([^0-9]{1,5})([0-9]{1,2}\.?[0-9]{0,2})(.*)$/ && print "$1d$3k$5\" $7d$9k$11\"\n";' | sed "s/k/'/g" | tee "$cartella"/csv/"$filename"_tmp_raw1.txt | sed '1d' > "$cartella"/csv/"$filename"_tmp.txt
+  csvsql -I --query 'select "LONGITUDINE su GIS" as longitude, "LATITUDINE su GIS" as latitude from '"$filename"'' "$i" | tee "$cartella"/csv/"$filename"_tmp_raw2.txt | sed 's/°/d/g;s/,/./g' | perl  -pe 's/^[^0-9]{1,5}([0-9]{1,3})(d ?)([0-9]{1,2})([^0-9]{1,5})([0-9]{1,2}\.?[0-9]{0,2})([^0-9]+)([0-9]{1,3})(d ?)([0-9]{1,2})([^0-9]{1,5})([0-9]{1,2}\.?[0-9]{0,2})(.*)$/$1d$3k$5\" $7d$9k$11\"/' | tee "$cartella"/csv/"$filename"_tmp_raw1.txt | sed "s/k/'/g" | sed '1d' > "$cartella"/csv/"$filename"_tmp.txt
   # converto le coordinate in gradi decimali
   cs2cs -f "%.6f" +proj=latlong +datum=WGS84 "$cartella"/csv/"$filename"_tmp.txt > "$cartella"/csv/"$filename".txt
   # inserisco una intestazione
@@ -86,11 +93,13 @@ for i in "$cartella"/csv/*.csv;
   # rimuovo una stringa inutile
   sed  -i 's/ 0.000000//g;s/\t/,/g' "$cartella"/csv/"$filename".txt
   cp "$i" "$cartella"/csv/"$filename"_tmp.csv
-  # associo ai dati originali, quelli con le coordinate in gradi decimali
+  # ai file csv aggiungo le due colonne con la coordinate, concatenando in orizzontale i file csv originali
+  # e i file txt creati
   csvjoin "$cartella"/csv/"$filename"_tmp.csv "$cartella"/csv/"$filename".txt > "$i"
-  # cancello una serie di file temporanei
-  rm "$cartella"/csv/"$filename"_tmp*
-  rm "$cartella"/csv/"$filename".txt
+  # cancello i vari file temporanei creati
+  # rm "$cartella"/csv/"$filename"_tmp*.csv
+  rm "$cartella"/csv/"$filename"_tmp*.csv
+  # rm "$cartella"/csv/"$filename".txt
 done
 
 # unisco tutti i vari file dei vari territori in un unico file
