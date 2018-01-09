@@ -1,3 +1,7 @@
+# Da fare
+- fare test su Veneto e vedere se l'ordine in output rimane quello di input
+- estrarre dati con wikidata
+- associare codice ISTAT comunale via select touch
 
 
 # scarico i dati
@@ -20,20 +24,12 @@ for filename in os.listdir('./'):
    pyexcel.save_as(file_name=(splitext(filename)[0]+".ods"), dest_file_name=(splitext(filename)[0])+".csv")
 ```
 
-# apro i file con pandas e li pulisco
-
-- importare in pandas
-- rimuovere inutili righe di intestazione
-- inserire come nome colonna il nome del file source nell'attributo "territorio"
-
 # note
 
 - 01/I216/CT/19 ha lat e lon invertite
 - colonne nascoste
 - inutili righe di intestazione
 - nel file Sicilia c'è scritto Abruzzo e c'è una riga di intestazione in più
+- non è possibile filtrare quello con il diametro più grande perché non è un numero
 
-# Da fare
 
-- estrarre dati con wikidata
-- associare codice ISTAT comunale via select touch

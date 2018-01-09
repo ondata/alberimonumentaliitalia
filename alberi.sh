@@ -37,10 +37,10 @@ do
 done < $INPUT
 IFS=$OLDIFS
 
-comment1
 
 rm "$cartella"/file.csv
 
+comment1
 # rimuovo vecchi file CSV
 rm "$cartella"/csv/*.csv; 
 
@@ -68,7 +68,7 @@ for i in "$cartella"/csv/*.csv;
   tr  '\r' '\n' < "$cartella"/csv/"$filename"_tmp.csv > "$i"
   # rimuovo dai CSV tutte le righe inutili (triple intestazioni, footer, ecc..), che sono quelle che non iniziano per numero
   sed -i -n '/^[0-9].*$/p' "$i"
-  ## aggiungo riga intestazione
+  # aggiungo riga intestazione
   sed  '1s|^|ID,N. SCHEDA,PROVINCIA,COMUNE,LOCALITÀ,LATITUDINE su GIS,LONGITUDINE su GIS,ALTITUDINE (m s.l.m.),CONTESTO URBANO sì/no,NOME SCIENTIFICO,NOME VOLGARE,CIRCONFERENZA FUSTO (cm),ALTEZZA (m),CRITERI DI MONUMENTALITÀ,PROPOSTA DICHIARAZIONE NOTEVOLE INTERESSE PUBBLICO\n|' "$i" > "$cartella"/csv/"$filename"_tmp.csv
   # rimuovo le colonne nascoste che erano presenti nei file ods, ovvero dalla 16 in poi, quindi tengo soltanto da 1 a 15
   csvcut -c 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 "$cartella"/csv/"$filename"_tmp.csv > "$i"
@@ -85,7 +85,7 @@ for i in "$cartella"/csv/*.csv;
   filename="${filename%.*}"
   # estraggo soltanto le colonne con latitude e longitude e poi sostituisco il decimale da "," a ".", 
   # converto il carattere "°" in "d", e estraggo via regex i dati geografici in una modalità leggibile
-  csvsql -I --query 'select "LONGITUDINE su GIS" as longitude, "LATITUDINE su GIS" as latitude from '"$filename"'' "$i" | tee "$cartella"/csv/"$filename"_tmp_raw2.txt | sed 's/°/d/g;s/,/./g' | perl  -pe 's/^[^0-9]{1,5}([0-9]{1,3})(d ?)([0-9]{1,2})([^0-9]{1,5})([0-9]{1,2}\.?[0-9]{0,2})([^0-9]+)([0-9]{1,3})(d ?)([0-9]{1,2})([^0-9]{1,5})([0-9]{1,2}\.?[0-9]{0,2})(.*)$/$1d$3k$5\" $7d$9k$11\"/' | tee "$cartella"/csv/"$filename"_tmp_raw1.txt | sed "s/k/'/g" | sed '1d' > "$cartella"/csv/"$filename"_tmp.txt
+  csvsql -I --query 'select "LONGITUDINE su GIS" as longitude, "LATITUDINE su GIS" as latitude from '"$filename"'' "$i" | tee "$cartella"/csv/"$filename"_tmp_raw1.txt | sed 's/°/d/g;s/,/./g' | perl  -pe 's/^[^0-9]{1,5}([0-9]{1,3})(d ?)([0-9]{1,2})([^0-9]{1,5})([0-9]{1,2}\.?[0-9]{0,2})([^0-9]+)([0-9]{1,3})(d ?)([0-9]{1,2})([^0-9]{1,5})([0-9]{1,2}\.?[0-9]{0,2})(.*)$/$1d$3k$5\" $7d$9k$11\"/' | tee "$cartella"/csv/"$filename"_tmp_raw2.txt | sed "s/k/'/g" | sed '1d' > "$cartella"/csv/"$filename"_tmp.txt
   # converto le coordinate in gradi decimali
   cs2cs -f "%.6f" +proj=latlong +datum=WGS84 "$cartella"/csv/"$filename"_tmp.txt > "$cartella"/csv/"$filename".txt
   # inserisco una intestazione
@@ -97,14 +97,17 @@ for i in "$cartella"/csv/*.csv;
   # e i file txt creati
   csvjoin "$cartella"/csv/"$filename"_tmp.csv "$cartella"/csv/"$filename".txt > "$i"
   # cancello i vari file temporanei creati
-  # rm "$cartella"/csv/"$filename"_tmp*.csv
   rm "$cartella"/csv/"$filename"_tmp*.csv
-  # rm "$cartella"/csv/"$filename".txt
+  rm "$cartella"/csv/"$filename"_tmp*.csv
+  rm "$cartella"/csv/"$filename".txt
+  rm "$cartella"/csv/*.txt
 done
 
 # unisco tutti i vari file dei vari territori in un unico file
 csvstack "$cartella"/csv/*.csv > "$cartella"/csv/alberiMonumentali.csv
 
-# alcuni record producono output errati per le coordinate (perché ci sono problemi nei dati originali) 
-# creo il geojson a partire dai record che hanno valorizzate le coordinate
-csvsql --query "select * from alberiMonumentali where longitude is not null" "$cartella"/alberiMonumentali.csv | csvjson --lat "latitude" --lon "longitude" > "$cartella"/alberiMonumentali.geojson
+# estraggo i record che non hanno errori nelle colonne con le coordinate
+grep -v "000000" "$cartella"/csv/alberiMonumentali.csv > "$cartella"/alberiMonumentali.csv
+
+# creo il geojson
+csvjson --lat "latitude" --lon "longitude" "$cartella"/alberiMonumentali.csv > "$cartella"/alberiMonumentali.geojson
