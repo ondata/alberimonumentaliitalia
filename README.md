@@ -31,5 +31,7 @@ for filename in os.listdir('./'):
 - inutili righe di intestazione
 - nel file Sicilia c'è scritto Abruzzo e c'è una riga di intestazione in più
 - non è possibile filtrare quello con il diametro più grande perché non è un numero
+- ci sono schede duplicate 01/D927/SV/07, 01/G157/AN/11, 04/G508/KR/18 e 06/A258/RI/12
+
 
 

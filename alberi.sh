@@ -17,6 +17,7 @@ mkdir -p "$cartella"/ods
 mkdir -p "$cartella"/csv
 
 <<comment1
+comment1
 # svuoto la cartella dove inserirò i file di download
 rm "$cartella"/ods/*.ods
 
@@ -40,7 +41,6 @@ IFS=$OLDIFS
 
 rm "$cartella"/file.csv
 
-comment1
 # rimuovo vecchi file CSV
 rm "$cartella"/csv/*.csv; 
 
@@ -106,8 +106,8 @@ done
 # unisco tutti i vari file dei vari territori in un unico file
 csvstack "$cartella"/csv/*.csv > "$cartella"/csv/alberiMonumentali.csv
 
-# estraggo i record che non hanno errori nelle colonne con le coordinate
-grep -v "000000" "$cartella"/csv/alberiMonumentali.csv > "$cartella"/alberiMonumentali.csv
+# estraggo i record che non hanno errori nelle colonne con le coordinate (quelle che contegono 000000 e quella che ha lat e lon invertite)
+grep -v "000000" "$cartella"/csv/alberiMonumentali.csv | csvgrep -c 16 -i -r "^3" > "$cartella"/alberiMonumentali.csv
 
 # creo il geojson
 csvjson --lat "latitude" --lon "longitude" "$cartella"/alberiMonumentali.csv > "$cartella"/alberiMonumentali.geojson
