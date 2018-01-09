@@ -76,7 +76,8 @@ for i in "$cartella"/csv/*.csv;
   sed -i -r 's/ +/ /g' "$i"
 done
 
-# converto le coordinate in formato numerico, ad esempio da 14°21'48,11'' a 14.363611
+# estraggo due coloonne con le coordinate in formato numerico, ad esempio da 14°21'48,11'' a 14.363611
+# e aggiungo queste colonne ai CSV creati
 for i in "$cartella"/csv/*.csv; 
  do
   filename=$(basename "$i")
