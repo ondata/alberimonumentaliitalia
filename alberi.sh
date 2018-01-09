@@ -55,7 +55,7 @@ for i in "$cartella"/csv/*.csv;
   filename=$(basename "$i")
   extension="${filename##*.}"
   filename="${filename%.*}"
-  # rimuovo i caretteri \n dalle celle, sono i ritorni a capo interni a queste
+  # rimuovo i caretteri "\n" dalle celle, è il ritorno a capo interno a queste
   tr -d '\n' < "$i" > "$cartella"/csv/"$filename"_tmp.csv
   # converto il ritorno a capo di ogni fine linea da '\r' a '\n'
   tr  '\r' '\n' < "$cartella"/csv/"$filename"_tmp.csv > "$i"
@@ -87,15 +87,14 @@ for i in "$cartella"/csv/*.csv;
   cp "$i" "$cartella"/csv/"$filename"_tmp.csv
   # associo ai dati originali, quelli con le coordinate in gradi decimali
   csvjoin "$cartella"/csv/"$filename"_tmp.csv "$cartella"/csv/"$filename".txt > "$i"
+  # cancello una serie di file temporanei
   rm "$cartella"/csv/"$filename"_tmp*
   rm "$cartella"/csv/"$filename".txt
 done
 
-# unisco tutti i vari file in un unico file
+# unisco tutti i vari file dei vari territori in un unico file
 csvstack "$cartella"/csv/*.csv > "$cartella"/csv/alberiMonumentali.csv
 
-# alcuni record producono output errati per le coordinate (perché ci sono problemi nei dati originali) e li escludo
-<"$cartella"/csv/alberiMonumentali.csv grep -v "000000" > "$cartella"/alberiMonumentali.csv
-
+# alcuni record producono output errati per le coordinate (perché ci sono problemi nei dati originali) 
 # creo il geojson a partire dai record che hanno valorizzate le coordinate
 csvsql --query "select * from alberiMonumentali where longitude is not null" "$cartella"/alberiMonumentali.csv | csvjson --lat "latitude" --lon "longitude" > "$cartella"/alberiMonumentali.geojson
