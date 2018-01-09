@@ -6,6 +6,7 @@
 # csvkit
 # pyexcel
 # perl (di solito preinstallato)
+# cs2cs
 ### requirements ###
 
 set -x
@@ -16,8 +17,6 @@ cartella=$(pwd)
 mkdir -p "$cartella"/ods
 mkdir -p "$cartella"/csv
 
-<<comment1
-comment1
 # svuoto la cartella dove inserirò i file di download
 rm "$cartella"/ods/*.ods
 
@@ -38,7 +37,7 @@ do
 done < $INPUT
 IFS=$OLDIFS
 
-
+# cancello il file con l'anagrafica dei file da scaricare
 rm "$cartella"/file.csv
 
 # rimuovo vecchi file CSV
@@ -77,14 +76,14 @@ for i in "$cartella"/csv/*.csv;
   sed -i -r 's/ +/ /g' "$i"
 done
 
-# convero le coordinate in formato numerico, ad esempio da 14°21'48,11'' a 14.363611
+# converto le coordinate in formato numerico, ad esempio da 14°21'48,11'' a 14.363611
 for i in "$cartella"/csv/*.csv; 
  do
   filename=$(basename "$i")
   extension="${filename##*.}"
   filename="${filename%.*}"
   # estraggo soltanto le colonne con latitude e longitude e poi sostituisco il decimale da "," a ".", 
-  # converto il carattere "°" in "d", e estraggo via regex i dati geografici in una modalità leggibile
+  # converto il carattere "°" in "d", e estraggo via regex i dati geografici in una modalità leggibile da cs2cs
   csvsql -I --query 'select "LONGITUDINE su GIS" as longitude, "LATITUDINE su GIS" as latitude from '"$filename"'' "$i" | tee "$cartella"/csv/"$filename"_tmp_raw1.txt | sed 's/°/d/g;s/,/./g' | perl  -pe 's/^[^0-9]{1,5}([0-9]{1,3})(d ?)([0-9]{1,2})([^0-9]{1,5})([0-9]{1,2}\.?[0-9]{0,2})([^0-9]+)([0-9]{1,3})(d ?)([0-9]{1,2})([^0-9]{1,5})([0-9]{1,2}\.?[0-9]{0,2})(.*)$/$1d$3k$5\" $7d$9k$11\"/' | tee "$cartella"/csv/"$filename"_tmp_raw2.txt | sed "s/k/'/g" | sed '1d' > "$cartella"/csv/"$filename"_tmp.txt
   # converto le coordinate in gradi decimali
   cs2cs -f "%.6f" +proj=latlong +datum=WGS84 "$cartella"/csv/"$filename"_tmp.txt > "$cartella"/csv/"$filename".txt
@@ -98,15 +97,13 @@ for i in "$cartella"/csv/*.csv;
   csvjoin "$cartella"/csv/"$filename"_tmp.csv "$cartella"/csv/"$filename".txt > "$i"
   # cancello i vari file temporanei creati
   rm "$cartella"/csv/"$filename"_tmp*.csv
-  rm "$cartella"/csv/"$filename"_tmp*.csv
-  rm "$cartella"/csv/"$filename".txt
   rm "$cartella"/csv/*.txt
 done
 
 # unisco tutti i vari file dei vari territori in un unico file
 csvstack "$cartella"/csv/*.csv > "$cartella"/csv/alberiMonumentali.csv
 
-# estraggo i record che non hanno errori nelle colonne con le coordinate (quelle che contegono 000000 e quella che ha lat e lon invertite)
+# estraggo i record che non hanno errori nelle colonne con le coordinate (quelle che contegono 000000 e quella che ha lat e lon invertite, in cui lon inizia per "3")
 grep -v "000000" "$cartella"/csv/alberiMonumentali.csv | csvgrep -c 16 -i -r "^3" > "$cartella"/alberiMonumentali.csv
 
 # creo il geojson
