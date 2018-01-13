@@ -1,0 +1,8 @@
+<OGRVRTDataSource>
+    <OGRVRTLayer name="alberiMonumentali" relativeToVRT="1">
+        <SrcDataSource>./alberiMonumentali.geojson</SrcDataSource>
+    </OGRVRTLayer>
+    <OGRVRTLayer name="comuni" relativeToVRT="1">
+        <SrcDataSource>./risorse/comuni.shp</SrcDataSource>
+    </OGRVRTLayer>
+</OGRVRTDataSource>

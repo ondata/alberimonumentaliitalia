@@ -62,9 +62,8 @@ for i in "$cartella"/csv/*.csv;
   extension="${filename##*.}"
   filename="${filename%.*}"
   # rimuovo i caretteri "\n" dalle celle, è il ritorno a capo interno a queste
-  tr -d '\n' < "$i" > "$cartella"/csv/"$filename"_tmp.csv
-  # converto il ritorno a capo di ogni fine linea da '\r' a '\n'
-  tr  '\r' '\n' < "$cartella"/csv/"$filename"_tmp.csv > "$i"
+  <"$i" perl  -pe 's/\r\n/~~/' | perl -pe 's/\n/ /' | sed 's/~~/\n/g' > "$cartella"/csv/"$filename"_tmp.csv
+  cat "$cartella"/csv/"$filename"_tmp.csv > "$i"
   # rimuovo dai CSV tutte le righe inutili (triple intestazioni, footer, ecc..), che sono quelle che non iniziano per numero
   sed -i -n '/^[0-9].*$/p' "$i"
   # aggiungo riga intestazione
@@ -76,7 +75,7 @@ for i in "$cartella"/csv/*.csv;
   sed -i -r 's/ +/ /g' "$i"
 done
 
-# estraggo due coloonne con le coordinate in formato numerico, ad esempio da 14°21'48,11'' a 14.363611
+# estraggo le coordinate in formato numerico (da 14°21'48,11'' a 14.363611) in due colonne
 # e aggiungo queste colonne ai CSV creati
 for i in "$cartella"/csv/*.csv; 
  do
@@ -104,13 +103,24 @@ done
 # unisco tutti i vari file dei vari territori in un unico file
 csvstack "$cartella"/csv/*.csv > "$cartella"/csv/alberiMonumentali.csv
 
-# estraggo i record che non hanno errori nelle colonne con le coordinate (quelle che contegono 000000 e quella che ha lat e lon invertite, in cui lon inizia per "3")
+# estraggo i record che non hanno errori nelle colonne con le coordinate (quelle che contegono 000000 e quella che ha lat e lon invertite, in cui lon inizia per "3") e/o con coordinate mancanti
 grep -v "000000" "$cartella"/csv/alberiMonumentali.csv | csvgrep -c 16 -i -r "^3" > "$cartella"/alberiMonumentali.csv
 
+# estraggo i record che hanno problemi con le coordinate e/o con coordinate mancanti
+<"$cartella"/csv/alberiMonumentali.csv | csvgrep -c 17 -r "[^0-9]$" | csvcut -C 16,17 > "$cartella"/alberiMonumentaliErroriCoordinate.csv 
+
 # Inserisco un '|' nella colonna "CRITERI DI MONUMENTALITÀ"
+# da "a) età e/o dimensioni b) forma e portamento" a "a) età e/o dimensioni|b) forma e portamento"
 cat "$cartella"/alberiMonumentali.csv | csvcut -c "14" | sed -r 's/(\s)([a-z])(\))/|\2\3/g;s/( )+$//g;s/ "$/"/g' > "$cartella"/csv/criteri.csv
 < "$cartella"/alberiMonumentali.csv csvcut -C "14" > "$cartella"/csv/alberiMonumentali_tmp.csv
 paste "$cartella"/csv/alberiMonumentali_tmp.csv "$cartella"/csv/criteri.csv | sed 's/\t/,/' > "$cartella"/alberiMonumentali.csv
 
 # creo il geojson
 csvjson --lat "latitude" --lon "longitude" "$cartella"/alberiMonumentali.csv > "$cartella"/alberiMonumentali.geojson
+
+<<comment1
+# estraggo il codice ISTAT comunale associato a ogni albero (ci mette un po' non c'è alcuna ottimizzazione)
+ogr2ogr -f CSV "$cartella"/tmp/alberiMonumentali_tmp.csv "$cartella"/input.vrt -dialect sqlite -sql "select A.id,A.comune, B.PRO_COM from alberimonumentali AS A, comuni AS B WHERE ST_Intersects(A.geometry,B.geometry)"
+cat "$cartella"/alberiMonumentali.csv > "$cartella"/csv/alberiMonumentali.csv
+csvsql -I --query "select a.*,b.PRO_COM from alberiMonumentali as a left join alberiMonumentali_tmp as b on a.id=b.id AND a.comune=b.comune" "$cartella"/csv/alberiMonumentali.csv "$cartella"/tmp/alberiMonumentali_tmp.csv > "$cartella"/alberiMonumentali.csv 
+comment1

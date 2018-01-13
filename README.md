@@ -3,7 +3,11 @@
 - ~~estrarre dati con wikidata~~
 - associare codice ISTAT comunale via select touch
 
+## PRO_COM
 
+```
+ogr2ogr -f CSV alberiMonumentali_tmp.csv input.vrt -dialect sqlite -sql "select A.id,A.comune, B.PRO_COM from alberimonumentali AS A, comuni AS B WHERE ST_Intersects(A.geometry,B.geometry)"
+```
 # scarico i dati
 Ho creato lo script alberi.sh
 
