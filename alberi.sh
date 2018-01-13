@@ -124,3 +124,10 @@ ogr2ogr -f CSV "$cartella"/tmp/alberiMonumentali_tmp.csv "$cartella"/input.vrt -
 cat "$cartella"/alberiMonumentali.csv > "$cartella"/csv/alberiMonumentali.csv
 csvsql -I --query "select a.*,b.PRO_COM from alberiMonumentali as a left join alberiMonumentali_tmp as b on a.id=b.id AND a.comune=b.comune" "$cartella"/csv/alberiMonumentali.csv "$cartella"/tmp/alberiMonumentali_tmp.csv > "$cartella"/alberiMonumentali.csv 
 comment1
+
+# wikipedia
+csvcut -c 1,2,3,4,14,15,18,20,22 "$cartella"/refine/alberiMonumentali-csv.csv > "$cartella"/refine/wikipedia.csv
+
+csvsql -I --query "select a.* from alberiMonumentali as a left join wikipedia as b on a.id=b.id AND a.comune=b.comune" "$cartella"/alberiMonumentali.csv "$cartella"/refine/wikipedia.csv
+
+csvsql -I --query "select a.*,b.imageInfo,b.imageURL,b.wikipediaItURL,b.abstract,b.wikidataURL from alberiMonumentali as a left join wikipedia as b on a.id=b.id AND a.comune=b.comune" "$cartella"/alberiMonumentali.csv "$cartella"/refine/wikipedia.csv > "$cartella"/alberiMonumentaliWikipedia.csv

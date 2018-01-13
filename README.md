@@ -1,7 +1,8 @@
 # Da fare
 - ~~fare test su Veneto e vedere se l'ordine in output rimane quello di input~~
 - ~~estrarre dati con wikidata~~
-- associare codice ISTAT comunale via select touch
+- ~~associare codice ISTAT comunale via select touch~~
+- aggiungere nome file nel db
 
 ## PRO_COM
 
