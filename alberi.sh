@@ -95,7 +95,7 @@ for i in "$cartella"/csv/*.csv;
   cp "$i" "$cartella"/csv/"$filename"_tmp.csv
   # ai file csv aggiungo le due colonne con la coordinate, concatenando in orizzontale i file csv originali
   # e i file txt creati
-  csvjoin "$cartella"/csv/"$filename"_tmp.csv "$cartella"/csv/"$filename".txt > "$i"
+  csvjoin -I "$cartella"/csv/"$filename"_tmp.csv "$cartella"/csv/"$filename".txt > "$i"
   # cancello i vari file temporanei creati
   rm "$cartella"/csv/"$filename"_tmp*.csv
   rm "$cartella"/csv/*.txt
