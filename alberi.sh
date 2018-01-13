@@ -110,7 +110,7 @@ grep -v "000000" "$cartella"/csv/alberiMonumentali.csv | csvgrep -c 16 -i -r "^3
 # Inserisco un '|' nella colonna "CRITERI DI MONUMENTALITÀ"
 cat "$cartella"/alberiMonumentali.csv | csvcut -c "14" | sed -r 's/(\s)([a-z])(\))/|\2\3/g;s/( )+$//g' > "$cartella"/csv/criteri.csv
 < "$cartella"/alberiMonumentali.csv csvcut -C "14" > "$cartella"/csv/alberiMonumentali_tmp.csv
-paste alberiMonumentali_tmp.csv criteri.csv | sed 's/\t/,/' > "$cartella"/alberiMonumentali.csv
+paste "$cartella"/csv/alberiMonumentali_tmp.csv "$cartella"/csv/criteri.csv | sed 's/\t/,/' > "$cartella"/alberiMonumentali.csv
 
 # creo il geojson
 csvjson --lat "latitude" --lon "longitude" "$cartella"/alberiMonumentali.csv > "$cartella"/alberiMonumentali.geojson
