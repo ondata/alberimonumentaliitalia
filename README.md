@@ -1,8 +1,22 @@
+<!-- TOC -->
+
+- [Da fare](#da-fare)
+    - [PRO_COM](#procom)
+- [scarico i dati](#scarico-i-dati)
+- [converto gli ods](#converto-gli-ods)
+    - [con pyexcel cli](#con-pyexcel-cli)
+    - [con libreoffice headless](#con-libreoffice-headless)
+    - [con pyexcel in csv](#con-pyexcel-in-csv)
+- [note](#note)
+    - [sui dati](#sui-dati)
+    - [generiche](#generiche)
+
+<!-- /TOC -->
 # Da fare
 - ~~fare test su Veneto e vedere se l'ordine in output rimane quello di input~~
 - ~~estrarre dati con wikidata~~
 - ~~associare codice ISTAT comunale via select touch~~
-- aggiungere nome file nel db
+- ~~aggiungere nome file nel db~~
 
 ## PRO_COM
 
@@ -16,7 +30,7 @@ Ho creato lo script alberi.sh
 
 ## con pyexcel cli
 
-    pyexcel transcode --sheet-index 0 input.ods ouput.csv
+        
 
 Scoperto grazie a [Andrea Enzo Guglielmo](https://www.facebook.com/andreaborruso/posts/10155399561523163?pnref=story)
 
@@ -37,6 +51,8 @@ for filename in os.listdir('./'):
 
 # note
 
+## sui dati
+
 - 01/I216/CT/19 ha lat e lon invertite
 - colonne nascoste
 - inutili righe di intestazione, e non sono sempre 4 (in Sicilia sono 5)
@@ -47,5 +63,8 @@ for filename in os.listdir('./'):
 - nelle coordinate spesso c'è il carattere `’` al posto di `'`, o `’’` per `"`
 - qualche volta c'è lo spazio dopo `°` o `'` e qualche volta al posto di `"` c'è `''`, come in `44° 1' 42,96''`
 
+## generiche
 
-
+- è un dataset di grande interesse. Queste mie parole sono un invito, non una paletta con un voto;
+- street view;
+- wikipedia wikidata;

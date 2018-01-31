@@ -69,8 +69,10 @@ for i in "$cartella"/csv/*.csv;
   # aggiungo riga intestazione
   sed  '1s|^|ID,N. SCHEDA,PROVINCIA,COMUNE,LOCALITÀ,LATITUDINE su GIS,LONGITUDINE su GIS,ALTITUDINE (m s.l.m.),CONTESTO URBANO sì/no,NOME SCIENTIFICO,NOME VOLGARE,CIRCONFERENZA FUSTO (cm),ALTEZZA (m),CRITERI DI MONUMENTALITÀ,PROPOSTA DICHIARAZIONE NOTEVOLE INTERESSE PUBBLICO\n|' "$i" > "$cartella"/csv/"$filename"_tmp.csv
   # rimuovo le colonne nascoste che erano presenti nei file ods, ovvero dalla 16 in poi, quindi tengo soltanto da 1 a 15
-  csvcut -c 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 "$cartella"/csv/"$filename"_tmp.csv > "$i"
-  rm "$cartella"/csv/"$filename"_tmp.csv
+  csvcut -c 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 "$cartella"/csv/"$filename"_tmp.csv > "$cartella"/csv/"$filename"_tmp2.csv
+  # aggiungo una colonna con il nome del file
+  csvsql -I --query 'select *,"'"$filename"'.csv" AS nomefile from '"$filename"'_tmp2' "$cartella"/csv/"$filename"_tmp2.csv > "$i"
+  rm "$cartella"/csv/"$filename"_tmp*.csv
   # rimuovo eventuali doppi spazi
   sed -i -r 's/ +/ /g' "$i"
 done
@@ -104,10 +106,10 @@ done
 csvstack "$cartella"/csv/*.csv > "$cartella"/csv/alberiMonumentali.csv
 
 # estraggo i record che non hanno errori nelle colonne con le coordinate (quelle che contegono 000000 e quella che ha lat e lon invertite, in cui lon inizia per "3") e/o con coordinate mancanti
-grep -v "000000" "$cartella"/csv/alberiMonumentali.csv | csvgrep -c 16 -i -r "^3" > "$cartella"/alberiMonumentali.csv
+grep -v "000000" "$cartella"/csv/alberiMonumentali.csv | csvgrep -c "longitude" -i -r "^3" > "$cartella"/alberiMonumentali.csv
 
 # estraggo i record che hanno problemi con le coordinate e/o con coordinate mancanti
-<"$cartella"/csv/alberiMonumentali.csv | csvgrep -c 17 -r "[^0-9]$" | csvcut -C 16,17 > "$cartella"/alberiMonumentaliErroriCoordinate.csv 
+<"$cartella"/csv/alberiMonumentali.csv | csvgrep -c "latitude" -r "[^0-9]$" | csvcut -C "longitude,latitude" > "$cartella"/alberiMonumentaliErroriCoordinate.csv 
 
 # Inserisco un '|' nella colonna "CRITERI DI MONUMENTALITÀ"
 # da "a) età e/o dimensioni b) forma e portamento" a "a) età e/o dimensioni|b) forma e portamento"
