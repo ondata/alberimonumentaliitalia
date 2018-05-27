@@ -6,6 +6,7 @@
     - [Struttura dei file originali](#struttura-dei-file-originali)
     - [Contenuti dei file originali](#contenuti-dei-file-originali)
     - [Gli strumenti utilizzati](#gli-strumenti-utilizzati)
+    - [I file estratti](#i-file-estratti)
 - [Alcune note sullo script](#alcune-note-sullo-script)
     - [Evviva le espressioni regolari](#evviva-le-espressioni-regolari)
     - [Convertire i file ods in batch](#convertire-i-file-ods-in-batch)
@@ -94,6 +95,13 @@ Nello _script_ sono state utilizzate queste utility:
 - **perl** (di solito preinstallato), per trasformare stringhe di testo usando le espressioni regolari;
 - **cs2cs**, per convertire in formato numerico i valori di longitudine e latitudine, in origine espressi come stringhe di testo, [http://proj4.org/apps/cs2cs.html](http://proj4.org/apps/cs2cs.html);
 - **Mapshaper** un'_utility_ per modificare ed elaborare file spaziali vettoriali, qui usata per associare i codici comunali ISTAT a ogni record, [https://github.com/mbloch/mapshaper](https://github.com/mbloch/mapshaper).
+
+## I file estratti
+
+A partire dai 21 file di origine, sono stati creati due file:
+
+- l'[elenco degli alberi monumentali](https://github.com/ondata/alberimonumentaliitalia/blob/master/alberiMonumentali.csv) il cui iter amministrativo è completo (leggere le [note finali](#note-finali)), in formato CSV;
+- lo stesso [elenco in formato GeoJSON](https://github.com/ondata/alberimonumentaliitalia/blob/master/alberiMonumentali.geojson).
 
 # Alcune note sullo script
 
@@ -193,7 +201,7 @@ Qui alcune letture, dedicate al come è bene pubblicare dati tabellari.
 
 # Note finali
 
-- Alcuni record - circa 15 - hanno delle problematicità sulle coordinate, che non sono state risolte in questa versione dello script. Quindi non sono presenti nel dataset finale (sono quelle del file `alberiMonumentaliErroriCoordinate.csv`);
+- Alcuni record - circa 15 - hanno delle problematicità sulle coordinate, che non sono state risolte in questa versione dello script. Quindi non sono presenti nel dataset finale (sono quelle del file [`alberiMonumentaliErroriCoordinate.csv`](https://github.com/ondata/alberimonumentaliitalia/blob/master/alberiMonumentaliErroriCoordinate.csv));
 - ad alcuni record - meno di 10 - non è stato possibile associare il codice ISTAT, perché ricadono poco fuori i limiti poligonali usati (sono quelli generalizzati di ISTAT). In una versione successiva dello _script_, si potrebbe aggiungere una "tolleranza" rispetto al poligono più vicino;
 - ho dato per scontato che il sistema di coordinate scelto in origine fosse con _datum_ `World Geodetic System 1984`. È probabile che sia così, ma non è certo. Se così non fosse, la posizione che ho estratto non sarebbe corretta;
 - nei file finali è stata aggiunta una colonna, per dare conto del file di origine (Sicilia, Lombardia, ecc.);
