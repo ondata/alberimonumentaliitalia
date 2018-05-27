@@ -119,12 +119,12 @@ csvcut <"$cartella"/alberiMonumentali.csv -C "14" >"$cartella"/csv/alberiMonumen
 paste "$cartella"/csv/alberiMonumentali_tmp.csv "$cartella"/csv/criteri.csv | sed 's/\t/,/' >"$cartella"/alberiMonumentali.csv
 
 # creo il geojson
-csvjson --lat "latitude" --lon "longitude" "$cartella"/alberiMonumentali.csv >"$cartella"/alberiMonumentali.geojson
+csvjson -I --lat "latitude" --lon "longitude" "$cartella"/alberiMonumentali.csv >"$cartella"/alberiMonumentali.geojson
 
 # estraggo i codici comunali ISTAT corrispondenti alle coordinate degli alberi
-mapshaper "$cartella"/alberiMonumentali.geojson -join "$cartella"/risorse/comuni.shp fields=PRO_COM -o "$cartella"/csv/alberiMonumentaliISTAT.csv
+mapshaper "$cartella"/alberiMonumentali.geojson -join "$cartella"/risorse/comuni.shp fields=PRO_COM_T -o "$cartella"/csv/alberiMonumentaliISTAT.csv
 cat "$cartella"/alberiMonumentali.csv > "$cartella"/csv/alberiMonumentali.csv
-csvsql -I --query "select a.*,b.PRO_COM from alberiMonumentali as a left join alberiMonumentaliISTAT as b on a.id=b.id AND a.comune=b.comune" "$cartella"/csv/alberiMonumentali.csv "$cartella"/csv/alberiMonumentaliISTAT.csv > "$cartella"/alberiMonumentali.csv
+csvsql -I --query "select a.*,b.PRO_COM_T from alberiMonumentali as a left join alberiMonumentaliISTAT as b on a.id=b.id AND a.comune=b.comune" "$cartella"/csv/alberiMonumentali.csv "$cartella"/csv/alberiMonumentaliISTAT.csv > "$cartella"/alberiMonumentali.csv
 
 # converto in GeoJSON i dati in CSV con le informazioni ISTAT
-csvjson --lat "latitude" --lon "longitude" "$cartella"/alberiMonumentali.csv >"$cartella"/alberiMonumentali.geojson
+csvjson -I --lat "latitude" --lon "longitude" "$cartella"/alberiMonumentali.csv >"$cartella"/alberiMonumentali.geojson
