@@ -127,4 +127,4 @@ cat "$cartella"/alberiMonumentali.csv > "$cartella"/csv/alberiMonumentali.csv
 csvsql -I --query "select a.*,b.PRO_COM_T from alberiMonumentali as a left join alberiMonumentaliISTAT as b on a.id=b.id AND a.comune=b.comune" "$cartella"/csv/alberiMonumentali.csv "$cartella"/csv/alberiMonumentaliISTAT.csv > "$cartella"/alberiMonumentali.csv
 
 # converto in GeoJSON i dati in CSV con le informazioni ISTAT
-csvjson -I --lat "latitude" --lon "longitude" "$cartella"/alberiMonumentali.csv >"$cartella"/alberiMonumentali.geojson
+csvjson -i 4 -I --lat "latitude" --lon "longitude" "$cartella"/alberiMonumentali.csv >"$cartella"/alberiMonumentali.geojson
