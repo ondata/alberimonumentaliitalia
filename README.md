@@ -84,7 +84,7 @@ In ultimo una nota su un aspetto più **botanico**, legata alla classificazione 
 
 ## Gli strumenti utilizzati
 
-Per creare il _dataset_ che è stato derivato dai dati originali, è stato creato uno *script* `bash`. Non sono pienamente soddisfatto di questo in termini di leggibilità e eleganza ed è molto migliorabile; mi sono dedicato soprattutto a raggiungere l'obiettivo, avere un file di insieme un po' più usabile.
+Per creare il _dataset_ che è stato derivato dai dati originali, è stato creato uno [*script* `bash`](https://github.com/ondata/alberimonumentaliitalia/blob/master/alberi.sh). Non sono pienamente soddisfatto di questo in termini di leggibilità e eleganza ed è molto migliorabile; mi sono dedicato soprattutto a raggiungere l'obiettivo, avere un file di insieme un po' più usabile.
 
 Nello _script_ sono state utilizzate queste utility:
 - **cURL**, per accedere a risorse web, [https://curl.haxx.se/](https://curl.haxx.se/);
