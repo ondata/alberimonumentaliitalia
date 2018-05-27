@@ -4,9 +4,11 @@
 # curl
 # jq
 # csvkit
-# pyexcel
+# pyexcel-cli
 # perl (di solito preinstallato)
 # cs2cs
+# pup
+# Mapshaper
 ### requirements ###
 
 set -x
@@ -104,7 +106,7 @@ done
 # unisco tutti i vari file dei vari territori in un unico file
 csvstack "$cartella"/csv/*.csv >"$cartella"/csv/alberiMonumentali.csv
 
-# estraggo i record che non hanno errori nelle colonne con le coordinate (quelle che contegono 000000 e quella che ha lat e lon invertite, in cui lon inizia per "3") e/o con coordinate mancanti
+# rimuovo dal dataset i record che non hanno errori nelle colonne con le coordinate (quelle che contegono 000000 e quella che ha lat e lon invertite, in cui lon inizia per "3") e/o con coordinate mancanti
 grep -v "000000" "$cartella"/csv/alberiMonumentali.csv | csvgrep -c "longitude" -i -r "^3" >"$cartella"/alberiMonumentali.csv
 
 # estraggo i record che hanno problemi con le coordinate e/o con coordinate mancanti
@@ -119,16 +121,10 @@ paste "$cartella"/csv/alberiMonumentali_tmp.csv "$cartella"/csv/criteri.csv | se
 # creo il geojson
 csvjson --lat "latitude" --lon "longitude" "$cartella"/alberiMonumentali.csv >"$cartella"/alberiMonumentali.geojson
 
-<<comment1
-# estraggo il codice ISTAT comunale associato a ogni albero (ci mette un po' non c'è alcuna ottimizzazione)
-ogr2ogr -f CSV "$cartella"/tmp/alberiMonumentali_tmp.csv "$cartella"/input.vrt -dialect sqlite -sql "select A.id,A.comune, B.PRO_COM from alberimonumentali AS A, comuni AS B WHERE ST_Intersects(A.geometry,B.geometry)"
+# estraggo i codici comunali ISTAT corrispondenti alle coordinate degli alberi
+mapshaper "$cartella"/alberiMonumentali.geojson -join "$cartella"/risorse/comuni.shp fields=PRO_COM -o "$cartella"/csv/alberiMonumentaliISTAT.csv
 cat "$cartella"/alberiMonumentali.csv > "$cartella"/csv/alberiMonumentali.csv
-csvsql -I --query "select a.*,b.PRO_COM from alberiMonumentali as a left join alberiMonumentali_tmp as b on a.id=b.id AND a.comune=b.comune" "$cartella"/csv/alberiMonumentali.csv "$cartella"/tmp/alberiMonumentali_tmp.csv > "$cartella"/alberiMonumentali.csv 
-comment1
+csvsql -I --query "select a.*,b.PRO_COM from alberiMonumentali as a left join alberiMonumentaliISTAT as b on a.id=b.id AND a.comune=b.comune" "$cartella"/csv/alberiMonumentali.csv "$cartella"/csv/alberiMonumentaliISTAT.csv > "$cartella"/alberiMonumentali.csv
 
-# wikipedia
-csvcut -c 1,2,3,4,14,15,18,20,22 "$cartella"/refine/alberiMonumentali-csv.csv >"$cartella"/refine/wikipedia.csv
-
-csvsql -I --query "select a.* from alberiMonumentali as a left join wikipedia as b on a.id=b.id AND a.comune=b.comune" "$cartella"/alberiMonumentali.csv "$cartella"/refine/wikipedia.csv
-
-csvsql -I --query "select a.*,b.imageInfo,b.imageURL,b.wikipediaItURL,b.abstract,b.wikidataURL from alberiMonumentali as a left join wikipedia as b on a.id=b.id AND a.comune=b.comune" "$cartella"/alberiMonumentali.csv "$cartella"/refine/wikipedia.csv >"$cartella"/alberiMonumentaliWikipedia.csv
+# converto in GeoJSON i dati in CSV con le informazioni ISTAT
+csvjson --lat "latitude" --lon "longitude" "$cartella"/alberiMonumentali.csv >"$cartella"/alberiMonumentali.geojson
