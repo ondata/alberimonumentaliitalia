@@ -10,3 +10,5 @@ Qui tutti i dettagli [https://medium.com/tantotanto/dove-sono-gli-alberi-monumen
 ## Note
 
 I dati usati per associate il codice comunale ISTAT ai vari alberi sono di ISTAT (reperibili [qui](https://www.istat.it/it/archivio/210584)).
+
+La licenza associata a questo repository non è applicabile ai dati estratti, perché i dati ministeriali non sono associati a una licenza che ne consente il riuso.
