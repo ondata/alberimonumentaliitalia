@@ -1,15 +1,16 @@
 #!/bin/bash
 
-### requirements ###
+### requisiti ###
 # curl
 # jq
-# csvkit
-# pyexcel-cli
+# csvkit (si installa via pip di python)
+# pyexcel-cli (si installa via pip di python)
+# pyexcel-ods3 (si installa via pip di python)
 # perl (di solito preinstallato)
 # cs2cs
 # pup
 # Mapshaper
-### requirements ###
+### requisiti ###
 
 set -x
 
