@@ -1,5 +1,8 @@
+#!/bin/bash
+
+sqlite3 nomeDb.db <<EOF
 -- per usare questo script occorre creare prima un db.db
--- nel seguente modo: $ sqlite3 nomedb.db
+-- nel seguente modo: $ sqlite3 nomeDb.db
 -- si avvierà sqlite con db pronto all''uso
 --
 .mode csv alberiMonumentali
@@ -37,12 +40,6 @@ WHERE "PROVINCIA" regexp 'Monza.*';
 
 -- correzione campo  PROPOSTA DICHIARAZIONE NOTEVOLE INTERESSE PUBBLICO
 UPDATE "alberiMonumentali" SET "PROPOSTA DICHIARAZIONE NOTEVOLE INTERESSE PUBBLICO" = 'sì'
-WHERE "PROPOSTA DICHIARAZIONE NOTEVOLE INTERESSE PUBBLICO" regexp '.*[sS].*';
-UPDATE "alberiMonumentali" SET "PROPOSTA DICHIARAZIONE NOTEVOLE INTERESSE PUBBLICO" = 'no'
-WHERE "PROPOSTA DICHIARAZIONE NOTEVOLE INTERESSE PUBBLICO" regexp '.*[nN].*';
-
--- correzione campo  PROPOSTA DICHIARAZIONE NOTEVOLE INTERESSE PUBBLICO
-UPDATE "alberiMonumentali" SET "PROPOSTA DICHIARAZIONE NOTEVOLE INTERESSE PUBBLICO" = 'sì'
 WHERE "PROPOSTA DICHIARAZIONE NOTEVOLE INTERESSE PUBBLICO" = 'si';
 
 -- esporto in csv
@@ -51,3 +48,5 @@ WHERE "PROPOSTA DICHIARAZIONE NOTEVOLE INTERESSE PUBBLICO" = 'si';
 .output alberiMonumentali_v01.csv
 SELECT * FROM alberiMonumentali;
 .quit
+EOF
+rm ./nomeDb.db
